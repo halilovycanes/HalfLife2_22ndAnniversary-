@@ -186,8 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
 
-            const rotateX = (y / (rect.height / 2)) * -8;
-            const rotateY = (x / (rect.width / 2)) * 8;
+            const rotateX = (y / (rect.height / 2)) * -12;
+            const rotateY = (x / (rect.width / 2)) * 12;
 
             card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
         });
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => { nodes.advisorImg.style.transform = 'scale(1)'; }, 100);
 
             clearTimeout(resetTimer);
-            resetTimer = setTimeout(() => { clickCount = 0; }, 2500);
+            resetTimer = setTimeout(() => { clickCount = 0; }, 1500);
 
             if (clickCount >= 5) {
                 triggerAttack();
